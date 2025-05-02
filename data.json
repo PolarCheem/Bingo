@@ -1,3 +1,4 @@
+getgenv().Mobile = true
 local Luna = loadstring(game:HttpGet("https://raw.githubusercontent.com/PolarCheem/Bingo/refs/heads/main/luna%20ui%20changes", true))()
 
 local Window = Luna:CreateWindow({
@@ -49,7 +50,7 @@ local Input = Tab:CreateInput({
 				    	end
 }, "Input") -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
 
-wait(10)
+wait(8)
 
 local coregui = game:GetService("CoreGui")
 
@@ -65,11 +66,13 @@ end
 function findInput()
     local lunaUI = findLuna()
 
-    if lunaUI then
-        for _, input in pairs(lunaUI:GetDescendants()) do
-            if input.Name == "InputBox" then
-                input.Size = UDim2.new(0, 95, 0, 35)
-            end
+while getgenv().Mobile == true do
+		    if lunaUI then
+		        for _, input in pairs(lunaUI:GetDescendants()) do
+		            if input.Name == "InputBox" then
+		                input.Size = UDim2.new(0, 95, 0, 40)
+			            end
+												end
         end
     end
 end
