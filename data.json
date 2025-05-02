@@ -39,13 +39,12 @@ local Tab = Window:CreateTab({
 local Input = Tab:CreateInput({
 	Name = "Dynamic Input Example",
 	Description = nil,
-	PlaceholderText = "Input Placeholder",
+	PlaceholderText = "Inp",
 	CurrentValue = "", -- the current text
 	Numeric = false, -- When true, the user may only type numbers in the box (Example walkspeed)
 	MaxCharacters = nil, -- if a number, the textbox length cannot exceed the number
-	Enter = false, -- When true, the callback will only be executed when the user presses enter.
+	Enter = true, -- When true, the callback will only be executed when the user presses enter.
     	Callback = function(Text)
-       	 -- The function that takes place when the input is changed
-	 -- The variable (Text) is a string for the value in the text box
-    	end
+    print(Text)
+				    	end
 }, "Input") -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
