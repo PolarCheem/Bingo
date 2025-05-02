@@ -71,9 +71,10 @@ while getgenv().Mobile == true do
 		        for _, input in pairs(lunaUI:GetDescendants()) do
 		            if input.Name == "InputBox" then
 		                input.Size = UDim2.new(0, 95, 0, 40)
-			            end
-												end
-        end
+					            end
+															end
+										  end
+							task.wait()
     end
 end
 
